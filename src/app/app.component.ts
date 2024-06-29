@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {BalApp, BalButton, BalFooter, BalHeading} from "@baloise/ds-angular";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [RouterOutlet, BalApp, BalHeading, BalButton, BalFooter],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
