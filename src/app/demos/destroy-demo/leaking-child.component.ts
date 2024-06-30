@@ -28,7 +28,7 @@ export class LeakingChildComponent implements OnInit, OnDestroy {
 
   constructor() {
     this.counter$ = interval(1000).pipe(
-      tap(_ => console.count(`id: ${this.id}`)),
+      tap(_ => console.count(`LeakingChild: id: ${this.id}`)),
     );
   }
 

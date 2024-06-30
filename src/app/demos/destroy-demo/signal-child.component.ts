@@ -29,7 +29,7 @@ export class SignalChildComponent implements OnInit, OnDestroy {
 
   constructor() {
     this.counter$ = interval(1000).pipe(
-      tap(it => console.count(`id: ${this.id}`)),
+      tap(it => console.count(`SignalChild: id: ${this.id}`)),
     );
     this.counter = toSignal(this.counter$);
   }
