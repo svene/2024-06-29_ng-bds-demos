@@ -1,0 +1,24 @@
+//@import '@baloise/design-system-css/sass/mixins';
+.cmp-header {
+  margin: 10px 0 10px 0;
+}
+.cmp-button {
+  color: white;
+  background-color: #000d6e;
+  border-radius: 3px;
+}
+.cmp-container {
+  background-color: white;
+  border-style: dashed;
+  border-width: 1px;
+  padding: 10px;
+  border-radius: 5px;
+
+  width: 10%;
+}
+
+.cmp-card {
+  width: 50%;
+  margin: 20px;
+  //padding: 10px;
+}
