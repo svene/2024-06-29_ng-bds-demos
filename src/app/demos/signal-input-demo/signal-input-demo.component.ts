@@ -3,6 +3,7 @@ import {IsevenSetterComponent} from "./iseven-setter.component";
 import {interval} from "rxjs";
 import {AsyncPipe, NgIf} from "@angular/common";
 import {CounterNoSetterComponent} from "./counter-nosetter.component";
+import {IsEvenOnChangesComponent} from "./iseven-onchanges.component";
 
 @Component({
   selector: 'app-signal-input-demo',
@@ -11,7 +12,8 @@ import {CounterNoSetterComponent} from "./counter-nosetter.component";
     IsevenSetterComponent,
     AsyncPipe,
     NgIf,
-    CounterNoSetterComponent
+    CounterNoSetterComponent,
+    IsEvenOnChangesComponent
   ],
   template: `
     <ng-container *ngIf="numbers$ | async as number">
@@ -20,6 +22,7 @@ import {CounterNoSetterComponent} from "./counter-nosetter.component";
 
       <app-counter-nosetter [counter]="number"></app-counter-nosetter>
       <app-iseven-setter [counter]="number"></app-iseven-setter>
+      <app-iseven-onchanges [counter]="number"></app-iseven-onchanges>
     </ng-container>
   `,
 })

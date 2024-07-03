@@ -1,16 +1,21 @@
 import {Component, Input} from '@angular/core';
-import {BalCard} from "@baloise/ds-angular";
+import {BalCard, BalCardContent, BalCardTitle} from "@baloise/ds-angular";
 import {count} from "rxjs";
 
 @Component({
   selector: 'app-iseven-setter',
   standalone: true,
   imports: [
-    BalCard
+    BalCard,
+    BalCardContent,
+    BalCardTitle
   ],
   template: `
     <bal-card>
-      <p>iseven-setter: isEven: {{isEven}}</p>
+      <bal-card-title>IsEven Setter</bal-card-title>
+      <bal-card-content>
+        <p>isEven: {{ isEven }}</p>
+      </bal-card-content>
     </bal-card>
   `,
 })
