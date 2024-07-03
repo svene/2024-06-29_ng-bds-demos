@@ -1,8 +1,8 @@
-import {Component, Input} from '@angular/core';
+import {Component, computed, input, Input} from '@angular/core';
 import {BalCard, BalCardContent, BalCardTitle} from "@baloise/ds-angular";
 
 @Component({
-  selector: 'app-iseven-setter',
+  selector: 'app-iseven-signal',
   standalone: true,
   imports: [
     BalCard,
@@ -11,18 +11,14 @@ import {BalCard, BalCardContent, BalCardTitle} from "@baloise/ds-angular";
   ],
   template: `
     <bal-card>
-      <bal-card-title>IsEven Setter</bal-card-title>
+      <bal-card-title>IsEven Signal</bal-card-title>
       <bal-card-content>
         <p>isEven: {{ isEven }}</p>
       </bal-card-content>
     </bal-card>
   `,
 })
-export class IsEvenSetterComponent {
-  isEven: boolean | undefined;
-
-  @Input({required: true})
-  set counter(c: number) {
-    this.isEven = c % 2 === 0;
-  }
+export class IsEvenSignalComponentComponent {
+  counter = input<number>();
+  isEven = computed(() => this.counter() ?? 0 % 2 === 0);
 }
