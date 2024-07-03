@@ -21,6 +21,4 @@ export class IsevenSetterComponent {
   set counter(c: number) {
     this.isEven = c % 2 === 0;
   }
-
-  // protected readonly count = count;
 }
